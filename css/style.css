@@ -1,0 +1,350 @@
+/* ========================================
+   高中人生模擬器
+   Pixel RPG Style
+======================================== */
+
+/* ===== 全域 ===== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+
+  font-family: "Courier New", monospace;
+
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 40px;
+
+  min-height: 100vh;
+
+  line-height: 1.8;
+}
+
+/* ===== 標題 ===== */
+
+h1,
+h2,
+h3 {
+  text-align: center;
+
+  border: 4px solid white;
+
+  padding: 20px;
+
+  margin-bottom: 30px;
+
+  letter-spacing: 2px;
+}
+
+/* ===== 劇情文字框 ===== */
+
+#story {
+  border: 4px solid white;
+
+  padding: 25px;
+
+  margin-bottom: 30px;
+
+  font-size: 60px;
+
+  line-height: 2;
+}
+
+/* ===== 封面圖片 ===== */
+
+.hero-image {
+  width: 100%;
+
+  height: 50vh;
+
+  object-fit: cover;
+
+  border: 4px solid white;
+
+  margin-bottom: 30px;
+}
+
+/* ===== 輸入框 ===== */
+
+input {
+  width: 100%;
+
+  padding: 15px;
+
+  margin-top: 10px;
+
+  margin-bottom: 20px;
+
+  background: black;
+
+  color: white;
+
+  border: 3px solid white;
+
+  font-size: 60px;
+}
+
+input:focus {
+  outline: none;
+
+  border-color: white;
+}
+
+/* ===== 連結 ===== */
+
+a {
+  color: white;
+
+  text-decoration: none;
+}
+
+/* ===== 一般按鈕 ===== */
+
+button {
+  background: black;
+
+  color: white;
+
+  border: 3px solid white;
+
+  padding: 15px 30px;
+
+  cursor: pointer;
+
+  font-size: 1rem;
+
+  transition: 0.2s;
+}
+
+button:hover {
+  background: white;
+
+  color: black;
+}
+
+/* ===== 首頁開始遊戲按鈕 ===== */
+
+#start-btn {
+  display: block;
+
+  width: fit-content;
+
+  margin: 30px auto;
+
+  padding: 18px 40px;
+
+  border: 4px solid white;
+
+  text-align: center;
+
+  font-size: 60px;
+
+  transition: 0.2s;
+}
+
+.start-btn:hover {
+  background: white;
+
+  color: black;
+}
+
+/* ========================================
+   題目選項區
+======================================== */
+
+.choice-container {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 8px;
+
+  margin-top: 15px;
+}
+
+.choice {
+  border: 4px solid white;
+
+  min-height: 160px;
+
+  padding: 25px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  font-size: 50px;
+
+  transition: 0.2s;
+}
+
+.choice:hover {
+  background: white;
+
+  color: black;
+
+  transform: scale(1.03);
+}
+
+/* ========================================
+   結果頁
+======================================== */
+
+.ending-banner {
+  text-align: center;
+
+  border: 4px solid white;
+
+  padding: 25px;
+
+  margin-bottom: 40px;
+  .hero-image {
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    height: auto;
+
+    border: 4px solid white;
+
+    margin-bottom: 30px;
+  }
+
+  font-size: 2rem;
+
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
+
+#resultBox {
+  margin-top: 30px;
+}
+
+/* ===== 單一向度結果 ===== */
+
+.result-card {
+  border: 4px solid white;
+
+  padding: 25px;
+
+  margin-bottom: 25px;
+}
+
+.result-card h3 {
+  margin-top: 0;
+}
+
+/* ===== 分數顯示 ===== */
+
+.score {
+  font-size: 1.2rem;
+
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+/* ===== 重測按鈕 ===== */
+
+.reset-btn {
+  display: block;
+
+  width: fit-content;
+
+  margin: 40px auto;
+
+  padding: 18px 40px;
+
+  border: 4px solid white;
+
+  transition: 0.2s;
+}
+
+.reset-btn:hover {
+  background: white;
+
+  color: black;
+}
+
+/* ========================================
+   RPG風味裝飾
+======================================== */
+
+.pixel-box {
+  border: 4px solid white;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ========================================
+   手機版
+======================================== */
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .choice-container {
+    grid-template-columns: 1fr;
+  }
+
+  .choice {
+    min-height: 120px;
+  }
+
+  /* .hero-image {
+    height: 250px;
+  } */
+
+  .ending-banner {
+    font-size: 1.5rem;
+  }
+}
+
+body {
+  font-family: "Microsoft JhengHei", "微軟正黑體", sans-serif;
+
+  font-size: 48px;
+
+  line-height: 1.8;
+
+  background: black;
+
+  color: white;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 96px;
+}
+
+h3 {
+  font-size: 56px;
+}
