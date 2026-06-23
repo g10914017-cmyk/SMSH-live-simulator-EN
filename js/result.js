@@ -8,7 +8,7 @@ window.onload = function () {
 
   // 主標題
   document.getElementById("story").innerText =
-    `${name}，Congratulations on completing your three years of high school. You have lived through three unforgettable and meaningful years.`;
+    `${name}，Congratulations on completing your three years of high school. You have lived through three unforgettable and meaningful high school life !`;
 
   // 讀取分數
   const scores = {
